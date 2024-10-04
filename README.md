@@ -21,4 +21,4 @@ The logic of the game is that:
 
     8. The winner of the game is decided by the cumulative score of all 5 rounds.
 
-    9. In the event both users have the same     cumulative score the result will be output as a tie.
+    9. In the event both users have the same cumulative score the result will be output as a tie.
