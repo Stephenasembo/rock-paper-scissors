@@ -5,14 +5,17 @@
 let humanScore = 0;
 let computerScore = 0;
 
+// Play 5 rounds
+
 for (let i = 0; i < 5; i++)
 {
     playGame();
 }
 
-// Play 4 more rounds
 function playGame()
 {
+    // Randomly generate the computer choice
+
     function getComputerChoice()
     {
         let randomNumber = Math.random();
@@ -45,11 +48,15 @@ function playGame()
     let humanSelection = getHumanChoice();
     let computerSelection = getComputerChoice();
 
+    // Call playRound for one round of the game
     playRound(humanSelection, computerSelection);
 
     function playRound(humanChoice, computerChoice)
     {
-        // Rock beats paper
+        // Implement logic of the game
+            // Rock beats paper and scissors
+            // Paper beats rock
+            // Scissors beats paper
         switch(humanChoice)
         {
             case 'rock':
@@ -121,6 +128,20 @@ function playGame()
         }
     }
 }
-console.log('Human: ' + humanScore);
 // Decide the winner of the game based on their scores
 // Display the winner
+
+if (humanScore > computerScore)
+{
+    console.log('You win the game');
+}
+
+else if (humanScore < computerScore)
+{
+    console.log('The computer wins the game');
+}
+
+else
+{
+    console.log('It\'s a tie');
+}
