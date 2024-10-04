@@ -125,6 +125,8 @@ function playGame()
             // Handle input error
             default:
                 console.log('Invalid choice');
+                humanScore += 0;
+                computerScore += 1;
         }
     }
 }
