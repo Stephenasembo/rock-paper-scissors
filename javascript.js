@@ -1,6 +1,10 @@
 // Play the game
 // The game has 5 rounds
 // Declare score variables
+
+let humanScore = 0;
+let computerScore = 0;
+
 // In each round
     // Get computer choice randomly
     function getComputerChoice()
@@ -28,10 +32,10 @@
             choice = lowerCase;
             return choice;
         }
-        console.log(getHumanChoice());
         // Prompt user for input
             // Make it case insensitive
             // Handle input errors
+        
     // Decide the winner
     // Display the winner
     // Increment the winner's score by 1
