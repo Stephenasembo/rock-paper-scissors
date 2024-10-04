@@ -21,6 +21,14 @@
         return choice;
     }
         // Get human choice
+        function getHumanChoice()
+        {
+            let choice = prompt('What is your choice ?', '');
+            let lowerCase = choice.toLowerCase();
+            choice = lowerCase;
+            return choice;
+        }
+        console.log(getHumanChoice());
         // Prompt user for input
             // Make it case insensitive
             // Handle input errors
