@@ -7,14 +7,17 @@ let computerScore = 0;
 
 // In each round
     // Get computer choice randomly
-playGame();
+for (let i = 0; i < 5; i++)
+{
+    playGame();
+}
 
 // Play 4 more rounds
 function playGame()
 {
     function getComputerChoice()
     {
-        let randomNumber = Math.random()
+        let randomNumber = Math.random();
         if (randomNumber > 0 && randomNumber < 0.33)
         {
             choice = 'rock';
