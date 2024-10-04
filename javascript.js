@@ -54,7 +54,7 @@ function playGame()
     function playRound(humanChoice, computerChoice)
     {
         // Implement logic of the game
-            // Rock beats paper and scissors
+            // Rock beats scissors
             // Paper beats rock
             // Scissors beats paper
         switch(humanChoice)
