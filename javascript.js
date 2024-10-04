@@ -5,8 +5,6 @@
 let humanScore = 0;
 let computerScore = 0;
 
-// In each round
-    // Get computer choice randomly
 for (let i = 0; i < 5; i++)
 {
     playGame();
@@ -59,18 +57,18 @@ function playGame()
                 {
                     case 'rock':
                         console.log('It\'s a Tie');
-                        humanChoice += 1;
-                        computerChoice += 1;
+                        humanScore += 1;
+                        computerScore += 1;
                         break;
 
                     case 'paper':
                         console.log('You lose! Paper beats Rock');
-                        computerChoice += 1;
+                        computerScore += 1;
                         break;
 
                     case 'scissors':
                         console.log('You win! Rock beats Scissors');
-                        humanChoice += 1;
+                        humanScore += 1;
                         break;
                 }
                 break;
@@ -80,18 +78,18 @@ function playGame()
                 {
                     case 'rock':
                         console.log('You win! Paper beats Rock');
-                        humanChoice += 1;
+                        humanScore += 1;
                         break;
 
                     case 'paper':
                         console.log('It\'s a Tie!');
-                        humanChoice += 1;
-                        computerChoice += 1;
+                        humanScore += 1;
+                        computerScore += 1;
                         break;
 
                     case 'scissors':
                         console.log('You lose! Scissors beats Paper');
-                        computerChoice += 1;
+                        computerScore += 1;
                         break;
                 }
                 break;
@@ -101,18 +99,18 @@ function playGame()
                 {
                     case 'rock':
                         console.log('You lose! Rock beats Scissors');
-                        computerChoice += 1;
+                        computerScore += 1;
                         break;
 
                     case 'paper':
                         console.log('You win! Scissors beats Paper');
-                        humanChoice += 1;
+                        humanScore += 1;
                         break;
 
                     case 'scissors':
                         console.log('It\'s a Tie!');
-                        humanChoice += 1;
-                        computerChoice += 1;
+                        humanScore += 1;
+                        computerScore += 1;
                         break;
                 }
                 break;
@@ -120,17 +118,9 @@ function playGame()
             // Handle input error
             default:
                 console.log('Invalid choice');
-            
         }
-            // Decide the winner
-            // Display the winner
-            // Increment the winner's score by 1
-            // Rock beats scissors
-            // Paper beats rock
-            // Scissors beats paper
     }
-
-    // Call the playRound 5 times
 }
+console.log('Human: ' + humanScore);
 // Decide the winner of the game based on their scores
 // Display the winner
