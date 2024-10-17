@@ -4,6 +4,7 @@ let computerScore = 0;
 let rock = document.querySelector('#rock');
 let paper = document.querySelector('#paper');
 let scissors = document.querySelector('#scissors');
+let result = document.querySelector('#result');
 
 let computerSelection = getComputerChoice();
 let humanSelection = getHumanChoice(playRound);
@@ -51,19 +52,15 @@ function playRound(humanChoice, computerChoice)
             switch(computerChoice)
             {
                 case 'rock':
-                    console.log('It\'s a Tie');
-                    humanScore += 1;
-                    computerScore += 1;
+                    tie();
                     break;
 
                 case 'paper':
-                    console.log('You lose! Paper beats Rock');
-                    computerScore += 1;
+                    loss();
                     break;
 
                 case 'scissors':
-                    console.log('You win! Rock beats Scissors');
-                    humanScore += 1;
+                    win();
                     break;
             }
             break;
@@ -72,19 +69,15 @@ function playRound(humanChoice, computerChoice)
             switch(computerChoice)
             {
                 case 'rock':
-                    console.log('You win! Paper beats Rock');
-                    humanScore += 1;
+                    win();
                     break;
 
                 case 'paper':
-                    console.log('It\'s a Tie!');
-                    humanScore += 1;
-                    computerScore += 1;
+                    tie();
                     break;
 
                 case 'scissors':
-                    console.log('You lose! Scissors beats Paper');
-                    computerScore += 1;
+                    loss();
                     break;
             }
             break;
@@ -93,21 +86,38 @@ function playRound(humanChoice, computerChoice)
             switch(computerChoice)
             {
                 case 'rock':
-                    console.log('You lose! Rock beats Scissors');
-                    computerScore += 1;
+                    loss();
                     break;
 
                 case 'paper':
-                    console.log('You win! Scissors beats Paper');
-                    humanScore += 1;
+                    win();
                     break;
 
                 case 'scissors':
-                    console.log('It\'s a Tie!');
-                    humanScore += 1;
-                    computerScore += 1;
+                    tie();
                     break;
             }
             break;
     }
+}
+
+function tie()
+{
+    humanScore += 1;
+    computerScore += 1;
+    let text = "This round was a tie!";
+}
+
+function win()
+{
+    humanScore += 1;
+    computerScore += 0;
+    let text = "YYay! You won this round!";
+}
+
+function loss()
+{
+    humanScore += 0;
+    computerScore += 1;
+    let text = "Oh! You lost this round!";
 }
