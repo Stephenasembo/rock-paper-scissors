@@ -185,17 +185,27 @@ function playGame()
     let text = '';
     if (humanScore > computerScore)
     {
-        text = 'HOORAY! You won the game';
+        text = 'HOORAY! You won the game \n' +
+                ' Final game results: '+
+                ' Player: ' + humanScore +
+                ' Computer: ' + computerScore;
     }
     else if (humanScore < computerScore)
     {
-        text = 'Oh, you lost wanna have another try ?';
+        text = 'Oh, you lost wanna have another try ? \n' +
+                ' Final game results: '+
+                ' Player: ' + humanScore +
+                ' Computer: ' + computerScore;
     }
     else
     {
-        text = "Phew! That was an intense game but it's a tie";
+        text = "Phew! That was an intense game but it's a tie \n" +
+                ' Final game results: '+
+                ' Player: ' + humanScore +
+                ' Computer: ' + computerScore;
     }
-    result.textContent = text;
+    result.innerText = text;
+    console.log(text);
     }
 }
 
