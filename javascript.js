@@ -1,16 +1,9 @@
-// Play the game
-// The game has 5 rounds
-// Declare score variables
-
 let humanScore = 0;
 let computerScore = 0;
 
-// Play 5 rounds
-
-for (let i = 0; i < 5; i++)
-{
-    playGame();
-}
+let rock = document.querySelector('#rock');
+let paper = document.querySelector('#paper');
+let scissors = document.querySelector('#scissors');
 
 function playGame()
 {
@@ -35,14 +28,8 @@ function playGame()
     }
 
     // Get human choice
-    // Prompt user for input
-        // Make it case insensitive
     function getHumanChoice()
     {
-        let choice = prompt('What is your choice ?', '');
-        let lowerCase = choice.toLowerCase();
-        choice = lowerCase;
-        return choice;
     }
         
     let humanSelection = getHumanChoice();
