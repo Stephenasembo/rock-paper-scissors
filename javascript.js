@@ -8,8 +8,8 @@ const result = document.querySelector('#result');
 
 function playGame()
 {
-    let computerSelection = getComputerChoice();
-    let humanSelection = getHumanChoice(playRound);
+    let computerSelection;
+    getHumanChoice(playRound);
 
     function getComputerChoice()
     {
@@ -34,14 +34,17 @@ function playGame()
     function getHumanChoice(playRound)
     {
         rock.addEventListener('click', () => {
+                computerSelection = getComputerChoice();
                 playRound('rock', computerSelection, tie, win, loss, gameOver);
         });
 
         paper.addEventListener('click', () => {
+            computerSelection = getComputerChoice();
             playRound('paper', computerSelection, tie, win, loss, gameOver);
         });
 
         scissors.addEventListener('click', () => {
+            computerSelection = getComputerChoice();
             playRound('scissors', computerSelection, tie, win, loss, gameOver);
         });
     }
