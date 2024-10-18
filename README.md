@@ -1,7 +1,7 @@
 # rock-paper-scissors
 A fun and easy hand game anyone can learn and enjoy.
 
-The entire game consists of 5 rounds whereby the player i.e the user or computer with the highest score is declared the winner of the game.
+The first player to achieve 5 points wins the game.
 
 The logic of the game is that:
 
